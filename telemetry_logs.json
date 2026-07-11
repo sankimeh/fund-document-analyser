@@ -1,0 +1,50 @@
+[
+  {
+    "timestamp": "2026-07-11T16:03:53.659Z",
+    "taskType": "LEAF_COMPILATION",
+    "provider": "gemini",
+    "exactModelId": "gemini-3.1-flash-lite",
+    "inputTokens": 161,
+    "outputTokens": 106,
+    "latencyMs": 1077,
+    "retries": 0,
+    "success": true,
+    "compilationId": "DOC_SMOKE",
+    "estimatedCost": {
+      "amount": 0.00019925000000000002,
+      "status": "CALCULATED"
+    }
+  },
+  {
+    "timestamp": "2026-07-11T16:03:54.666Z",
+    "taskType": "PARENT_COMPILATION",
+    "provider": "gemini",
+    "exactModelId": "gemini-3.1-flash-lite",
+    "inputTokens": 330,
+    "outputTokens": 114,
+    "latencyMs": 1006,
+    "retries": 0,
+    "success": true,
+    "compilationId": "DOC_SMOKE",
+    "estimatedCost": {
+      "amount": 0.00025350000000000004,
+      "status": "CALCULATED"
+    }
+  },
+  {
+    "timestamp": "2026-07-11T16:03:55.609Z",
+    "taskType": "PARENT_COMPILATION",
+    "provider": "gemini",
+    "exactModelId": "gemini-3.1-flash-lite",
+    "inputTokens": 340,
+    "outputTokens": 114,
+    "latencyMs": 942,
+    "retries": 0,
+    "success": true,
+    "compilationId": "DOC_SMOKE",
+    "estimatedCost": {
+      "amount": 0.00025600000000000004,
+      "status": "CALCULATED"
+    }
+  }
+]

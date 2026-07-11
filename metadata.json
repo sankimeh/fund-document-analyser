@@ -1,0 +1,8 @@
+{
+  "name": "Fund Document Analyser",
+  "description": "A high-precision document compilation and multi-route evidence retrieval system for investment advisor Q&A.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,848 @@
+{
+  "quality_report": {
+    "pages_processed": 5,
+    "raw_pymupdf_blocks": 69,
+    "reconstructed_paragraphs": 7,
+    "headings_detected": 9,
+    "tables_detected": 3,
+    "multi_page_tables_stitched": 1,
+    "repeated_headers_removed": 1,
+    "repeated_footers_removed": 1,
+    "visual_regions_detected": 2,
+    "final_EvidenceUnit_count": 18
+  },
+  "visual_regions": [
+    {
+      "type": "chart_or_diagram",
+      "bbox": [
+        50.0,
+        120.0,
+        500.0,
+        790.0
+      ],
+      "confidence": 0.85,
+      "title": "Visual Chart on Page 4"
+    },
+    {
+      "type": "chart_or_diagram",
+      "bbox": [
+        50.0,
+        120.0,
+        500.0,
+        430.0
+      ],
+      "confidence": 0.85,
+      "title": "Visual Chart on Page 5"
+    }
+  ],
+  "tables": [
+    {
+      "table_id": "T_3_1_STITCHED",
+      "page_number": 3,
+      "bbox": [
+        50.0,
+        120.0,
+        500.0,
+        180.0
+      ],
+      "headers": [
+        "Share Class",
+        "Management Fee"
+      ],
+      "rows": [
+        [
+          "Class A",
+          "1.50%"
+        ],
+        [
+          "Class B",
+          "0.75%"
+        ],
+        [
+          "Expense Item 1",
+          "0.01%"
+        ],
+        [
+          "Expense Item 2",
+          "0.02%"
+        ],
+        [
+          "Expense Item 3",
+          "0.03%"
+        ],
+        [
+          "Expense Item 4",
+          "0.04%"
+        ],
+        [
+          "Expense Item 5",
+          "0.05%"
+        ],
+        [
+          "Expense Item 6",
+          "0.06%"
+        ],
+        [
+          "Expense Item 7",
+          "0.07%"
+        ],
+        [
+          "Expense Item 8",
+          "0.08%"
+        ],
+        [
+          "Expense Item 9",
+          "0.09%"
+        ],
+        [
+          "Expense Item 10",
+          "0.10%"
+        ],
+        [
+          "Expense Item 11",
+          "0.11%"
+        ],
+        [
+          "Expense Item 12",
+          "0.12%"
+        ],
+        [
+          "Expense Item 13",
+          "0.13%"
+        ],
+        [
+          "Expense Item 14",
+          "0.14%"
+        ],
+        [
+          "Expense Item 15",
+          "0.15%"
+        ],
+        [
+          "Expense Item 16",
+          "0.16%"
+        ],
+        [
+          "Expense Item 17",
+          "0.17%"
+        ],
+        [
+          "Expense Item 18",
+          "0.18%"
+        ],
+        [
+          "Expense Item 19",
+          "0.19%"
+        ],
+        [
+          "Expense Item 20",
+          "0.20%"
+        ],
+        [
+          "Expense Item 21",
+          "0.21%"
+        ],
+        [
+          "Expense Item 22",
+          "0.22%"
+        ],
+        [
+          "Expense Item 23",
+          "0.23%"
+        ],
+        [
+          "Expense Item 24",
+          "0.24%"
+        ],
+        [
+          "Expense Item 25",
+          "0.25%"
+        ],
+        [
+          "Expense Item 26",
+          "0.26%"
+        ],
+        [
+          "Expense Item 27",
+          "0.27%"
+        ],
+        [
+          "Expense Item 28",
+          "0.28%"
+        ],
+        [
+          "Expense Item 29",
+          "0.29%"
+        ],
+        [
+          "Expense Item 30",
+          "0.30%"
+        ],
+        [
+          "Expense Item 31",
+          "0.31%"
+        ],
+        [
+          "Expense Item 32",
+          "0.32%"
+        ]
+      ],
+      "row_mappings": [
+        {
+          "Share Class": "Class A",
+          "Management Fee": "1.50%"
+        },
+        {
+          "Share Class": "Class B",
+          "Management Fee": "0.75%"
+        },
+        {
+          "Expense Category": "Expense Item 1",
+          "Annual Percentage": "0.01%"
+        },
+        {
+          "Expense Category": "Expense Item 2",
+          "Annual Percentage": "0.02%"
+        },
+        {
+          "Expense Category": "Expense Item 3",
+          "Annual Percentage": "0.03%"
+        },
+        {
+          "Expense Category": "Expense Item 4",
+          "Annual Percentage": "0.04%"
+        },
+        {
+          "Expense Category": "Expense Item 5",
+          "Annual Percentage": "0.05%"
+        },
+        {
+          "Expense Category": "Expense Item 6",
+          "Annual Percentage": "0.06%"
+        },
+        {
+          "Expense Category": "Expense Item 7",
+          "Annual Percentage": "0.07%"
+        },
+        {
+          "Expense Category": "Expense Item 8",
+          "Annual Percentage": "0.08%"
+        },
+        {
+          "Expense Category": "Expense Item 9",
+          "Annual Percentage": "0.09%"
+        },
+        {
+          "Expense Category": "Expense Item 10",
+          "Annual Percentage": "0.10%"
+        },
+        {
+          "Expense Category": "Expense Item 11",
+          "Annual Percentage": "0.11%"
+        },
+        {
+          "Expense Category": "Expense Item 12",
+          "Annual Percentage": "0.12%"
+        },
+        {
+          "Expense Category": "Expense Item 13",
+          "Annual Percentage": "0.13%"
+        },
+        {
+          "Expense Category": "Expense Item 14",
+          "Annual Percentage": "0.14%"
+        },
+        {
+          "Expense Category": "Expense Item 15",
+          "Annual Percentage": "0.15%"
+        },
+        {
+          "Expense Category": "Expense Item 16",
+          "Annual Percentage": "0.16%"
+        },
+        {
+          "Expense Category": "Expense Item 17",
+          "Annual Percentage": "0.17%"
+        },
+        {
+          "Expense Category": "Expense Item 18",
+          "Annual Percentage": "0.18%"
+        },
+        {
+          "Expense Category": "Expense Item 19",
+          "Annual Percentage": "0.19%"
+        },
+        {
+          "Expense Category": "Expense Item 20",
+          "Annual Percentage": "0.20%"
+        },
+        {
+          "Expense Category": "Expense Item 21",
+          "Annual Percentage": "0.21%"
+        },
+        {
+          "Expense Category": "Expense Item 22",
+          "Annual Percentage": "0.22%"
+        },
+        {
+          "Expense Category": "Expense Item 23",
+          "Annual Percentage": "0.23%"
+        },
+        {
+          "Expense Category": "Expense Item 24",
+          "Annual Percentage": "0.24%"
+        },
+        {
+          "Expense Category": "Expense Item 25",
+          "Annual Percentage": "0.25%"
+        },
+        {
+          "Expense Category": "Expense Item 26",
+          "Annual Percentage": "0.26%"
+        },
+        {
+          "Expense Category": "Expense Item 27",
+          "Annual Percentage": "0.27%"
+        },
+        {
+          "Expense Category": "Expense Item 28",
+          "Annual Percentage": "0.28%"
+        },
+        {
+          "Expense Category": "Expense Item 29",
+          "Annual Percentage": "0.29%"
+        },
+        {
+          "Expense Category": "Expense Item 30",
+          "Annual Percentage": "0.30%"
+        },
+        {
+          "Expense Category": "Expense Item 31",
+          "Annual Percentage": "0.31%"
+        },
+        {
+          "Expense Category": "Expense Item 32",
+          "Annual Percentage": "0.32%"
+        }
+      ]
+    },
+    {
+      "table_id": "T_5_3",
+      "page_number": 5,
+      "bbox": [
+        50.0,
+        120.0,
+        500.0,
+        240.0
+      ],
+      "headers": [
+        "Expense Category",
+        "Annual Percentage"
+      ],
+      "rows": [
+        [
+          "Expense Item 33",
+          "0.33%"
+        ],
+        [
+          "Expense Item 34",
+          "0.34%"
+        ],
+        [
+          "Expense Item 35",
+          "0.35%"
+        ],
+        [
+          "Expense Item 36",
+          "0.36%"
+        ],
+        [
+          "Expense Item 37",
+          "0.37%"
+        ]
+      ],
+      "row_mappings": [
+        {
+          "Expense Category": "Expense Item 33",
+          "Annual Percentage": "0.33%"
+        },
+        {
+          "Expense Category": "Expense Item 34",
+          "Annual Percentage": "0.34%"
+        },
+        {
+          "Expense Category": "Expense Item 35",
+          "Annual Percentage": "0.35%"
+        },
+        {
+          "Expense Category": "Expense Item 36",
+          "Annual Percentage": "0.36%"
+        },
+        {
+          "Expense Category": "Expense Item 37",
+          "Annual Percentage": "0.37%"
+        }
+      ]
+    }
+  ],
+  "evidence_units": [
+    {
+      "evidence_id": "E_BENCH_1",
+      "page": 1,
+      "section": "Introduction",
+      "subsection": "Vanguard Global Growth Fund",
+      "type": "heading",
+      "text": "Vanguard Global Growth Fund",
+      "bbox": [
+        50.0,
+        74.31999969482422,
+        398.0480041503906,
+        107.36799621582031
+      ],
+      "font_name": "Helvetica-Bold",
+      "font_size": 24.0
+    },
+    {
+      "evidence_id": "E_BENCH_2",
+      "page": 1,
+      "section": "Introduction",
+      "subsection": "Prospectus - July 2026",
+      "type": "heading",
+      "text": "Prospectus - July 2026",
+      "bbox": [
+        50.0,
+        114.94999694824219,
+        192.3939971923828,
+        134.18600463867188
+      ],
+      "font_name": "Helvetica",
+      "font_size": 14.0
+    },
+    {
+      "evidence_id": "E_BENCH_3",
+      "page": 1,
+      "section": "1. Investment Objective",
+      "subsection": "General",
+      "type": "heading",
+      "text": "1. Investment Objective",
+      "bbox": [
+        50.0,
+        165.02000427246094,
+        206.3939971923828,
+        184.29800415039062
+      ],
+      "font_name": "Helvetica-Bold",
+      "font_size": 14.0
+    },
+    {
+      "evidence_id": "E_BENCH_4",
+      "page": 1,
+      "section": "1. Investment Objective",
+      "subsection": "General",
+      "type": "paragraph",
+      "text": "The Vanguard Global Growth Fund seeks to provide long-term capital appreciation by investing primarily in high-quality growth companies located throughout the world. The Fund employs an active management strategy, selecting companies with strong balance sheets, leading market positions, and robust growth prospects. Under normal circumstances, at least 80% of the Fund's assets will be invested in common stocks of companies located in at least three different countries.",
+      "bbox": [
+        50.0,
+        194.25,
+        509.08984375,
+        267.989990234375
+      ],
+      "font_name": "Helvetica",
+      "font_size": 10.0
+    },
+    {
+      "evidence_id": "E_BENCH_5",
+      "page": 1,
+      "section": "2. Principal Investment Risks",
+      "subsection": "General",
+      "type": "heading",
+      "text": "2. Principal Investment Risks",
+      "bbox": [
+        50.0,
+        280.0199890136719,
+        243.74598693847656,
+        299.2980041503906
+      ],
+      "font_name": "Helvetica-Bold",
+      "font_size": 14.0
+    },
+    {
+      "evidence_id": "E_BENCH_6",
+      "page": 1,
+      "section": "2. Principal Investment Risks",
+      "subsection": "General",
+      "type": "paragraph",
+      "text": "All investments are subject to risk, including the possible loss of the money you invest. The Fund is subject to stock market risk, which is the chance that stock prices overall will decline. Foreign investing involves additional risks, including currency fluctuations and political instability, which may cause the Fund's share prices to fluctuate more widely.",
+      "bbox": [
+        50.0,
+        309.25,
+        442.909912109375,
+        367.989990234375
+      ],
+      "font_name": "Helvetica",
+      "font_size": 10.0
+    },
+    {
+      "evidence_id": "E_BENCH_7",
+      "page": 1,
+      "section": "2. Principal Investment Risks",
+      "subsection": "General",
+      "type": "paragraph",
+      "text": "[1] See page 10 for detailed risk factor disclosures.",
+      "bbox": [
+        50.0,
+        771.4000244140625,
+        229.6399688720703,
+        782.3920288085938
+      ],
+      "font_name": "Helvetica",
+      "font_size": 8.0
+    },
+    {
+      "evidence_id": "E_BENCH_8",
+      "page": 2,
+      "section": "3. Portfolio Management & Administration",
+      "subsection": "General",
+      "type": "heading",
+      "text": "3. Portfolio Management & Administration",
+      "bbox": [
+        50.0,
+        65.0199966430664,
+        329.2579345703125,
+        84.29800415039062
+      ],
+      "font_name": "Helvetica-Bold",
+      "font_size": 14.0
+    },
+    {
+      "evidence_id": "E_BENCH_9",
+      "page": 2,
+      "section": "3. Portfolio Management & Administration",
+      "subsection": "General",
+      "type": "paragraph",
+      "text": "The Vanguard Group, Inc., provides investment Portfolio managers oversee daily operations, advisory and administrative services to the Fund monitoring security selections and executing under a client-owned structure. This unique transactions across international exchanges. mutual ownership model ensures that the interests The advisory team holds regular weekly research of the advisor are fully aligned with those of the meetings to review global macroeconomic trends, shareholders, keeping overall operating costs and sector-specific developments, and asset expense ratios extremely low. valuation models.",
+      "bbox": [
+        50.0,
+        99.25,
+        529.5198974609375,
+        202.99000549316406
+      ],
+      "font_name": "Helvetica",
+      "font_size": 10.0
+    },
+    {
+      "evidence_id": "E_BENCH_10",
+      "page": 3,
+      "section": "4. Share Class Fee Disclosures",
+      "subsection": "General",
+      "type": "heading",
+      "text": "4. Share Class Fee Disclosures",
+      "bbox": [
+        50.0,
+        65.0199966430664,
+        256.989990234375,
+        84.29800415039062
+      ],
+      "font_name": "Helvetica-Bold",
+      "font_size": 14.0
+    },
+    {
+      "evidence_id": "E_BENCH_11",
+      "page": 3,
+      "section": "4. Share Class Fee Disclosures",
+      "subsection": "General",
+      "type": "paragraph",
+      "text": "Fees are deducted directly from the net assets of each respective share class on a daily basis. Class A shares are subject to an upfront sales charge, whereas Class B shares employ a contingent deferred sales charge (CDSC) that scales down over a multi-year holding period.",
+      "bbox": [
+        50.0,
+        199.25,
+        492.9698486328125,
+        242.99000549316406
+      ],
+      "font_name": "Helvetica",
+      "font_size": 10.0
+    },
+    {
+      "evidence_id": "E_BENCH_12",
+      "page": 3,
+      "section": "4. Share Class Fee Disclosures",
+      "subsection": "General",
+      "type": "paragraph",
+      "text": "[2] Management fees are subject to fee waivers under voluntary advisory caps.",
+      "bbox": [
+        50.0,
+        771.4000244140625,
+        328.79193115234375,
+        782.3920288085938
+      ],
+      "font_name": "Helvetica",
+      "font_size": 8.0
+    },
+    {
+      "evidence_id": "E_BENCH_13",
+      "page": 4,
+      "section": "5. Detailed Annual Fund Operating Expenses",
+      "subsection": "General",
+      "type": "heading",
+      "text": "5. Detailed Annual Fund Operating Expenses",
+      "bbox": [
+        50.0,
+        65.0199966430664,
+        348.7459411621094,
+        84.29800415039062
+      ],
+      "font_name": "Helvetica-Bold",
+      "font_size": 14.0
+    },
+    {
+      "evidence_id": "E_BENCH_14",
+      "page": 5,
+      "section": "5. Detailed Annual Fund Operating Expenses (Continued)",
+      "subsection": "General",
+      "type": "heading",
+      "text": "5. Detailed Annual Fund Operating Expenses (Continued)",
+      "bbox": [
+        50.0,
+        65.0199966430664,
+        431.1778259277344,
+        84.29800415039062
+      ],
+      "font_name": "Helvetica-Bold",
+      "font_size": 14.0
+    },
+    {
+      "evidence_id": "E_BENCH_15",
+      "page": 5,
+      "section": "5. Detailed Annual Fund Operating Expenses (Continued)",
+      "subsection": "Growth of $10,000 Historical Investment Chart",
+      "type": "heading",
+      "text": "Growth of $10,000 Historical Investment Chart",
+      "bbox": [
+        60.0,
+        287.1600036621094,
+        322.7399597167969,
+        303.6839904785156
+      ],
+      "font_name": "Helvetica-Bold",
+      "font_size": 12.0
+    },
+    {
+      "evidence_id": "E_BENCH_16",
+      "page": 5,
+      "section": "5. Detailed Annual Fund Operating Expenses (Continued)",
+      "subsection": "Growth of $10,000 Historical Investment Chart",
+      "type": "paragraph",
+      "text": "[Visual Chart: Bar and line graphs illustrating hypothetical growth from 2016 to 2026]",
+      "bbox": [
+        60.0,
+        310.32501220703125,
+        395.6550598144531,
+        322.6910095214844
+      ],
+      "font_name": "Helvetica",
+      "font_size": 9.0
+    },
+    {
+      "evidence_id": "E_BENCH_17",
+      "page": 3,
+      "section": "Table: T_3_1_STITCHED",
+      "subsection": "Table Data",
+      "type": "table",
+      "text": "Share Class | Management Fee\n----------------------------------------\nClass A | 1.50%\nClass B | 0.75%\nExpense Item 1 | 0.01%\nExpense Item 2 | 0.02%\nExpense Item 3 | 0.03%\nExpense Item 4 | 0.04%\nExpense Item 5 | 0.05%\nExpense Item 6 | 0.06%\nExpense Item 7 | 0.07%\nExpense Item 8 | 0.08%\nExpense Item 9 | 0.09%\nExpense Item 10 | 0.10%\nExpense Item 11 | 0.11%\nExpense Item 12 | 0.12%\nExpense Item 13 | 0.13%\nExpense Item 14 | 0.14%\nExpense Item 15 | 0.15%\nExpense Item 16 | 0.16%\nExpense Item 17 | 0.17%\nExpense Item 18 | 0.18%\nExpense Item 19 | 0.19%\nExpense Item 20 | 0.20%\nExpense Item 21 | 0.21%\nExpense Item 22 | 0.22%\nExpense Item 23 | 0.23%\nExpense Item 24 | 0.24%\nExpense Item 25 | 0.25%\nExpense Item 26 | 0.26%\nExpense Item 27 | 0.27%\nExpense Item 28 | 0.28%\nExpense Item 29 | 0.29%\nExpense Item 30 | 0.30%\nExpense Item 31 | 0.31%\nExpense Item 32 | 0.32%",
+      "bbox": [
+        50.0,
+        120.0,
+        500.0,
+        180.0
+      ],
+      "table_context": {
+        "headers": [
+          "Share Class",
+          "Management Fee"
+        ],
+        "title": "Extracted Table T_3_1_STITCHED",
+        "row_mappings": [
+          {
+            "Share Class": "Class A",
+            "Management Fee": "1.50%"
+          },
+          {
+            "Share Class": "Class B",
+            "Management Fee": "0.75%"
+          },
+          {
+            "Expense Category": "Expense Item 1",
+            "Annual Percentage": "0.01%"
+          },
+          {
+            "Expense Category": "Expense Item 2",
+            "Annual Percentage": "0.02%"
+          },
+          {
+            "Expense Category": "Expense Item 3",
+            "Annual Percentage": "0.03%"
+          },
+          {
+            "Expense Category": "Expense Item 4",
+            "Annual Percentage": "0.04%"
+          },
+          {
+            "Expense Category": "Expense Item 5",
+            "Annual Percentage": "0.05%"
+          },
+          {
+            "Expense Category": "Expense Item 6",
+            "Annual Percentage": "0.06%"
+          },
+          {
+            "Expense Category": "Expense Item 7",
+            "Annual Percentage": "0.07%"
+          },
+          {
+            "Expense Category": "Expense Item 8",
+            "Annual Percentage": "0.08%"
+          },
+          {
+            "Expense Category": "Expense Item 9",
+            "Annual Percentage": "0.09%"
+          },
+          {
+            "Expense Category": "Expense Item 10",
+            "Annual Percentage": "0.10%"
+          },
+          {
+            "Expense Category": "Expense Item 11",
+            "Annual Percentage": "0.11%"
+          },
+          {
+            "Expense Category": "Expense Item 12",
+            "Annual Percentage": "0.12%"
+          },
+          {
+            "Expense Category": "Expense Item 13",
+            "Annual Percentage": "0.13%"
+          },
+          {
+            "Expense Category": "Expense Item 14",
+            "Annual Percentage": "0.14%"
+          },
+          {
+            "Expense Category": "Expense Item 15",
+            "Annual Percentage": "0.15%"
+          },
+          {
+            "Expense Category": "Expense Item 16",
+            "Annual Percentage": "0.16%"
+          },
+          {
+            "Expense Category": "Expense Item 17",
+            "Annual Percentage": "0.17%"
+          },
+          {
+            "Expense Category": "Expense Item 18",
+            "Annual Percentage": "0.18%"
+          },
+          {
+            "Expense Category": "Expense Item 19",
+            "Annual Percentage": "0.19%"
+          },
+          {
+            "Expense Category": "Expense Item 20",
+            "Annual Percentage": "0.20%"
+          },
+          {
+            "Expense Category": "Expense Item 21",
+            "Annual Percentage": "0.21%"
+          },
+          {
+            "Expense Category": "Expense Item 22",
+            "Annual Percentage": "0.22%"
+          },
+          {
+            "Expense Category": "Expense Item 23",
+            "Annual Percentage": "0.23%"
+          },
+          {
+            "Expense Category": "Expense Item 24",
+            "Annual Percentage": "0.24%"
+          },
+          {
+            "Expense Category": "Expense Item 25",
+            "Annual Percentage": "0.25%"
+          },
+          {
+            "Expense Category": "Expense Item 26",
+            "Annual Percentage": "0.26%"
+          },
+          {
+            "Expense Category": "Expense Item 27",
+            "Annual Percentage": "0.27%"
+          },
+          {
+            "Expense Category": "Expense Item 28",
+            "Annual Percentage": "0.28%"
+          },
+          {
+            "Expense Category": "Expense Item 29",
+            "Annual Percentage": "0.29%"
+          },
+          {
+            "Expense Category": "Expense Item 30",
+            "Annual Percentage": "0.30%"
+          },
+          {
+            "Expense Category": "Expense Item 31",
+            "Annual Percentage": "0.31%"
+          },
+          {
+            "Expense Category": "Expense Item 32",
+            "Annual Percentage": "0.32%"
+          }
+        ]
+      }
+    },
+    {
+      "evidence_id": "E_BENCH_18",
+      "page": 5,
+      "section": "Table: T_5_3",
+      "subsection": "Table Data",
+      "type": "table",
+      "text": "Expense Category | Annual Percentage\n----------------------------------------\nExpense Item 33 | 0.33%\nExpense Item 34 | 0.34%\nExpense Item 35 | 0.35%\nExpense Item 36 | 0.36%\nExpense Item 37 | 0.37%",
+      "bbox": [
+        50.0,
+        120.0,
+        500.0,
+        240.0
+      ],
+      "table_context": {
+        "headers": [
+          "Expense Category",
+          "Annual Percentage"
+        ],
+        "title": "Extracted Table T_5_3",
+        "row_mappings": [
+          {
+            "Expense Category": "Expense Item 33",
+            "Annual Percentage": "0.33%"
+          },
+          {
+            "Expense Category": "Expense Item 34",
+            "Annual Percentage": "0.34%"
+          },
+          {
+            "Expense Category": "Expense Item 35",
+            "Annual Percentage": "0.35%"
+          },
+          {
+            "Expense Category": "Expense Item 36",
+            "Annual Percentage": "0.36%"
+          },
+          {
+            "Expense Category": "Expense Item 37",
+            "Annual Percentage": "0.37%"
+          }
+        ]
+      }
+    }
+  ]
+}

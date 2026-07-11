@@ -1,0 +1,12 @@
+{
+  "pages_processed": 5,
+  "raw_pymupdf_blocks": 69,
+  "reconstructed_paragraphs": 7,
+  "headings_detected": 9,
+  "tables_detected": 3,
+  "multi_page_tables_stitched": 1,
+  "repeated_headers_removed": 1,
+  "repeated_footers_removed": 1,
+  "visual_regions_detected": 2,
+  "final_EvidenceUnit_count": 18
+}
