@@ -16,7 +16,78 @@ export const ai = new GoogleGenAI({
   },
 });
 
+class ProcessRateLimiter {
+  private maxRequests: number;
+  private windowSizeMs = 60000;
+  private requestTimestamps: number[] = [];
+  private queue: (() => void)[] = [];
+  private isProcessing = false;
+  private timeoutId: any = null;
+
+  constructor() {
+    const maxReqStr = process.env.GEMINI_MAX_REQUESTS_PER_MINUTE;
+    const parsed = maxReqStr ? parseInt(maxReqStr, 10) : 12;
+    this.maxRequests = isNaN(parsed) || parsed <= 0 ? 12 : parsed;
+  }
+
+  public async acquire(): Promise<void> {
+    return new Promise<void>((resolve) => {
+      this.queue.push(resolve);
+      this.scheduleProcess();
+    });
+  }
+
+  private scheduleProcess() {
+    if (this.isProcessing) return;
+    this.isProcessing = true;
+    
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId);
+      this.timeoutId = null;
+    }
+
+    Promise.resolve().then(() => {
+      this.processQueue();
+    });
+  }
+
+  private processQueue() {
+    this.isProcessing = false;
+    if (this.queue.length === 0) return;
+
+    const now = Date.now();
+    this.requestTimestamps = this.requestTimestamps.filter(
+      (ts) => now - ts < this.windowSizeMs
+    );
+
+    while (this.queue.length > 0) {
+      const availableSlots = this.maxRequests - this.requestTimestamps.length;
+      if (availableSlots <= 0) {
+        break;
+      }
+
+      const nextResolve = this.queue.shift();
+      if (nextResolve) {
+        this.requestTimestamps.push(Date.now());
+        nextResolve();
+      }
+    }
+
+    if (this.queue.length > 0) {
+      const oldestTimestamp = this.requestTimestamps[0] || now;
+      const waitTime = oldestTimestamp + this.windowSizeMs - Date.now();
+      
+      this.timeoutId = setTimeout(() => {
+        this.timeoutId = null;
+        this.scheduleProcess();
+      }, Math.max(0, waitTime));
+    }
+  }
+}
+
 export class LLMProvider {
+  private static rateLimiter = new ProcessRateLimiter();
+
   /**
    * Helper to execute an API call with automatic retries on 429 Resource Exhausted.
    * Returns both the result and the number of retries encountered.
@@ -28,6 +99,7 @@ export class LLMProvider {
     let attempt = 0;
     while (true) {
       try {
+        await this.rateLimiter.acquire();
         const result = await fn();
         return { result, retries: attempt };
       } catch (error: any) {
