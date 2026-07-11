@@ -1,8 +1,12 @@
 import express from "express";
 import path from "path";
 import crypto from "crypto";
+import dotenv from "dotenv";
 import { createServer as createViteServer } from "vite";
 import { StorageService } from "./storage/index.js";
+
+dotenv.config();
+
 import { DocumentParser } from "./parsing/index.js";
 import { SemanticMapBuilder } from "./compilation/semantic_map_builder.js";
 import { FactExtractor } from "./compilation/fact_extractor.js";

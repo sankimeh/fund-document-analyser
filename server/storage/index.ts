@@ -49,7 +49,10 @@ export class StorageService {
   static async initialize(): Promise<void> {
     this.loadFromDisk();
     
-    if (Object.keys(this.compilations).length === 0) {
+    if (process.env.SEED_DEFAULT_FUNDS === "false") {
+      console.log("SEED_DEFAULT_FUNDS=false is set. Skipping seeding of default funds on startup.");
+      this.rebuildLexicalIndex();
+    } else if (Object.keys(this.compilations).length === 0) {
       console.log("No compiled documents found. Seeding realistic investment fund documents...");
       await this.seedDefaultFunds();
       this.saveToDisk();

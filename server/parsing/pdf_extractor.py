@@ -40,6 +40,57 @@ class LayoutAwarePDFParser:
         font_sizes.sort()
         return font_sizes[len(font_sizes) // 2]
 
+    def _is_valid_heading_candidate(self, text, avg_size, has_bold_span):
+        text = text.strip()
+        if not text:
+            return False
+            
+        # 1. Length and word count checks
+        if len(text) > 100:  # Excessive heading length
+            return False
+            
+        words = text.split()
+        if len(words) > 12:  # Too many words for a heading
+            return False
+            
+        # 2. Punctuation checks
+        # Headings should not end in standard sentence punctuation
+        if text[-1] in ('.', '?', '!', ';', ':'):
+            # Check if it's a section numbering like "1.1." or "I."
+            if not re.match(r"^\d+(\.\d+)*\.$", text) and not re.match(r"^[IVXLCDM]+\.$", text):
+                return False
+                
+        # Headings should not contain sentence-ending punctuation inside
+        if re.search(r"[\.\?\!]\s+[A-Z]", text):
+            return False
+            
+        # 3. Capitalization check (Title Case, UPPERCASE, or numbered header)
+        # Avoid lowercase-heavy prose
+        letters = [c for c in text if c.isalpha()]
+        if letters:
+            lowercase_count = sum(1 for c in letters if c.islower())
+            lowercase_ratio = lowercase_count / len(letters)
+            # If more than 75% of letters are lowercase and it doesn't start with a number/bullet, reject it
+            has_numbering = re.match(r"^\d", text) is not None
+            if lowercase_ratio > 0.75 and not has_numbering:
+                return False
+
+        # 4. Starting character checks
+        # Headings almost always start with a capital letter, a number, or a quote/symbol
+        if text[0].islower():
+            return False
+
+        # 5. Incomplete fragments check
+        # e.g., ending with a comma, or transition words that suggest continuing prose
+        if text.endswith(','):
+            return False
+            
+        # Avoid ending with small prepositions/conjunctions
+        if re.search(r"\b(and|or|but|the|of|to|for|with|in|on|by|at|from|this)\s*$", text, re.IGNORECASE):
+            return False
+
+        return True
+
     def detect_headers_footers(self):
         """
         Detects repeated text at the top 10% or bottom 10% of pages.
@@ -368,6 +419,11 @@ class LayoutAwarePDFParser:
                 elif text_content.isupper() and is_short and not_ending_period and avg_size >= self.median_font_size:
                     is_heading = True
 
+                # Secondary structural validation for headings
+                if is_heading:
+                    if not self._is_valid_heading_candidate(text_content, avg_size, has_bold_span):
+                        is_heading = False
+
                 # Footnote detection (typically at bottom or starts with footnote marker)
                 is_footnote = False
                 if re.match(r"^(\*+|†+|‡+|\[\d+\]|footnote)", text_content, re.IGNORECASE):
@@ -440,7 +496,21 @@ class LayoutAwarePDFParser:
         for block in reconstructed_blocks:
             if block["type"] == "header":
                 # Detect if section or subsection
-                is_sec = re.match(r"^\d+\.", block["text"]) or block["text"].isupper() or "objective" in block["text"].lower() or "section" in block["text"].lower()
+                is_sec = False
+                text_lower = block["text"].lower()
+                
+                # We only promote to main section if it meets robust heading guidelines and:
+                if len(block["text"]) < 80:
+                    if re.match(r"^\d+\.", block["text"]):
+                        is_sec = True
+                    elif block["text"].isupper() and not re.search(r"\b(dated|prospectus|plc|vanguard)\b", text_lower):
+                        # Avoid random large uppercase supplement headings or document titles as section headers
+                        is_sec = True
+                    elif re.search(r"\bobjective\b", text_lower) and not re.search(r"\b(environmental|sustainable|social|take|into)\b", text_lower):
+                        is_sec = True
+                    elif re.search(r"\bsection\b", text_lower) and not re.search(r"\b(under|see|in|of|this)\b", text_lower):
+                        is_sec = True
+                
                 if is_sec:
                     current_section = block["text"]
                     current_subsection = "General"
