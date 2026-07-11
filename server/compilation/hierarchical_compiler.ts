@@ -165,8 +165,12 @@ export class HierarchicalCompiler {
       const nodeIdsAtLevel = levels[currentLevel] || [];
       console.log(`Compiling level ${currentLevel} with ${nodeIdsAtLevel.length} nodes...`);
 
-      // We can parallelize nodes compilation at the same level
-      const compilePromises = nodeIdsAtLevel.map(async (nodeId) => {
+      const concurrencyLimit = process.env.LLM_COMPILATION_CONCURRENCY
+        ? parseInt(process.env.LLM_COMPILATION_CONCURRENCY, 10)
+        : 2;
+      const validLimit = isNaN(concurrencyLimit) || concurrencyLimit <= 0 ? 2 : concurrencyLimit;
+
+      const tasks = nodeIdsAtLevel.map((nodeId) => async () => {
         const treeNode = tree.nodes[nodeId];
         
         if (treeNode.level === maxLevel || treeNode.child_node_ids.length === 0) {
@@ -182,7 +186,7 @@ export class HierarchicalCompiler {
         }
       });
 
-      await Promise.all(compilePromises);
+      await this.runWithConcurrencyLimit(tasks, validLimit);
     }
 
     return {
@@ -512,6 +516,28 @@ ${JSON.stringify(childrenData, null, 2)}
         throw new Error(`[Schema Validation Error] Node ID: ${nodeId} - Field '${field}' is not an array.`);
       }
     }
+  }
+
+  private static async runWithConcurrencyLimit(
+    tasks: (() => Promise<void>)[],
+    limit: number
+  ): Promise<void> {
+    let currentIndex = 0;
+
+    const worker = async () => {
+      while (currentIndex < tasks.length) {
+        const index = currentIndex++;
+        await tasks[index]();
+      }
+    };
+
+    const workers: Promise<void>[] = [];
+    const actualLimit = Math.min(limit, tasks.length);
+    for (let i = 0; i < actualLimit; i++) {
+      workers.push(worker());
+    }
+
+    await Promise.all(workers);
   }
 
   /**
